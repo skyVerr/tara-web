@@ -11,13 +11,17 @@ import { HttpClientModule } from "@angular/common/http";
 //Semantic ui
 import { SuiModule } from 'ng2-semantic-ui';
 import { AdminHomeComponent } from './pages/admin/admin-home/admin-home.component';
+import { AdminTravelersComponent } from './pages/admin/admin-travelers/admin-travelers.component';
+import { TravelerAddComponent } from './pages/admin/admin-travelers/components/traveler-add/traveler-add.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    AdminHomeComponent
+    AdminHomeComponent,
+    AdminTravelersComponent,
+    TravelerAddComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,29 @@
+<div class="ui green padded segment">
+  <form #f="ngForm" (ngSubmit)="submit(f)" class="ui form" [ngClass]="{'loading' : formLoading}">
+    <h3 class="ui dividing header">Traveller Information</h3>
+    <div class="field">
+      <label>Name</label>
+
+      <div class="two fields">
+        <div class="field">
+          <input type="text" name="firstname" ngModel placeholder="First Name">
+        </div>
+        <div class="field">
+          <input type="text" name="lastname" ngModel placeholder="Last Name">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" name="email" ngModel placeholder="Last Name">
+      </div>
+      <div class="field">
+        <label for="email">Password</label>
+        <input type="password" name="password" ngModel placeholder="Password">
+      </div>
+    </div>
+
+    <button class="ui button primary" type="submit">Submit</button>
+    <button class="ui button" (click)="cancel()" type="submit">Cancel</button>
+  </form>
+</div>

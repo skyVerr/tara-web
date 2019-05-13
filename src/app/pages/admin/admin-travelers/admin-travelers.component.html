@@ -1,0 +1,30 @@
+<router-outlet></router-outlet>
+<div class="ui padded segment">
+  <h2 class="ui left floated header">Traveller Management</h2>
+  <button routerLink="add" class="ui right floated green button">Add traveller</button>
+  <table class="ui celled table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Email</th>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="!!travellers">
+      <tr *ngFor="let t of travellers">
+        <td width="10%" data-label="Id">{{ t.id }}</td>
+        <td width="30%" data-label="Email">{{ t.email }}</td>
+        <td width="50%" data-label="Name">{{ t.firstname  | titlecase }} {{ t.lastname  | titlecase }}</td>
+        <td width="10%" data-label="Actions">
+          <div class="ui icon buttons">
+              <button class="ui button"><i class="angle right icon"></i></button>
+              <button class="ui button"><i class="trash icon"></i></button>
+              <button class="ui button"><i class="pencil icon"></i></button>
+              <button class="ui button"><i class="key icon"></i></button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
