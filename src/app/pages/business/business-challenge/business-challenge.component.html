@@ -1,0 +1,30 @@
+<router-outlet></router-outlet>
+<div class="ui padded segment">
+  <h2 class="ui left floated header">Challenge Management</h2>
+  <button routerLink="add" class="ui right floated green button">Add Challenge</button>
+  <table class="ui celled table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Email</th>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of travellers">
+        <td width="10%" data-label="Id"></td>
+        <td width="30%" data-label="Email"></td>
+        <td width="50%" data-label="Name"></td>
+        <td width="10%" data-label="Actions">
+          <div class="ui icon buttons">
+              <button class="ui button"><i class="angle right icon"></i></button>
+              <button class="ui button"><i class="trash icon"></i></button>
+              <button class="ui button"><i class="pencil icon"></i></button>
+              <button class="ui button"><i class="key icon"></i></button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

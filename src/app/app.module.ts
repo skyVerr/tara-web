@@ -13,6 +13,8 @@ import { SuiModule } from 'ng2-semantic-ui';
 import { AdminHomeComponent } from './pages/admin/admin-home/admin-home.component';
 import { AdminTravelersComponent } from './pages/admin/admin-travelers/admin-travelers.component';
 import { TravelerAddComponent } from './pages/admin/admin-travelers/components/traveler-add/traveler-add.component';
+import { BusinessChallengeComponent } from './pages/business/business-challenge/business-challenge.component';
+import { ChallengeAddComponent } from './pages/business/business-challenge/components/challenge-add/challenge-add.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { TravelerAddComponent } from './pages/admin/admin-travelers/components/t
     LoginComponent,
     AdminHomeComponent,
     AdminTravelersComponent,
-    TravelerAddComponent
+    TravelerAddComponent,
+    BusinessChallengeComponent,
+    ChallengeAddComponent
   ],
   imports: [
     BrowserModule,

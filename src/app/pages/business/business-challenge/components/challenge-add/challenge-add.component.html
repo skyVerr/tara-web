@@ -1,0 +1,27 @@
+<div class="ui green padded segment">
+  <form class="ui form" [ngClass]="{'loading' : formLoading}">
+    <h3 class="ui dividing header">Challenge Information</h3>
+    <div class="field">
+      <label>Title</label>
+      <div class="field">
+        <input type="text" name="Title" ngModel placeholder="First Name">
+      </div>
+
+      <div class="field">
+        <label >Instruction</label>
+        <input type="text" ngModel placeholder="Instruction">
+      </div>
+      <div class="field">
+        <label>Hashtags</label>
+        <input type="text" ngModel placeholder="Hashtag1, Hashtag2">
+      </div>
+      <div class="field">
+        <label>Rewards</label>
+        <input type="text" ngModel placeholder="Rewards">
+      </div>
+    </div>
+
+    <button class="ui button primary" type="submit">Submit</button>
+    <button class="ui button" (click)="cancel()" type="submit">Cancel</button>
+  </form>
+</div>
