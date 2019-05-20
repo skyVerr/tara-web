@@ -1,23 +1,35 @@
 <div class="ui green padded segment">
-  <form class="ui form" [ngClass]="{'loading' : formLoading}">
+  <form #f="ngForm" (ngSubmit)="submitChallenge(f)" class="ui form" [ngClass]="{'loading' : formLoading}">
     <h3 class="ui dividing header">Challenge Information</h3>
     <div class="field">
       <label>Title</label>
       <div class="field">
-        <input type="text" name="Title" ngModel placeholder="First Name">
-      </div>
-
-      <div class="field">
-        <label >Instruction</label>
-        <input type="text" ngModel placeholder="Instruction">
+        <input type="text" name="title" ngModel placeholder="Title">
       </div>
       <div class="field">
-        <label>Hashtags</label>
-        <input type="text" ngModel placeholder="Hashtag1, Hashtag2">
+        <label >Type</label>
+        <sui-select class="selection"
+                    (ngModel)="type"
+                    #select>
+            <sui-select-option value="Facebook Share">
+            </sui-select-option>
+        </sui-select>
+      </div>
+      <div class="field">
+        <label>Instruction</label>
+        <textarea rows="3" ngModel name="instruction" placeholder="Instruction"></textarea>
+      </div>
+      <div class="field">
+        <label>Hashtag</label>
+        <input type="text" ngModel  name="hashtag"  placeholder="Hashtag">
+      </div>
+      <div class="field">
+        <label>Link</label>
+        <input type="text" ngModel  name="link"  placeholder="Link">
       </div>
       <div class="field">
         <label>Rewards</label>
-        <input type="text" ngModel placeholder="Rewards">
+        <input type="text" ngModel  name="rewards"  placeholder="Rewards">
       </div>
     </div>
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BusinessService } from 'src/app/services/business.service';
 
 @Component({
   selector: 'app-business-challenge',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BusinessChallengeComponent implements OnInit {
 
-  constructor() { }
+  challenges;
+
+  constructor(private businessChallenge: BusinessService) {
+    this.businessChallenge.getNewChallenge().subscribe( ()=>{
+      this.loadChallenges();
+    });
+   }
 
   ngOnInit() {
+    this.loadChallenges();
   }
 
+  async loadChallenges(){
+    this.challenges = await this.businessChallenge.getChallenges().toPromise();
+  }
 }

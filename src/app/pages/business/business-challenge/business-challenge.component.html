@@ -6,16 +6,24 @@
     <thead>
       <tr>
         <th>Id</th>
-        <th>Email</th>
-        <th>Name</th>
+        <th>Title</th>
+        <th>Type</th>
+        <th>Instruction</th>
+        <th>Link</th>
+        <th>Hashtag</th>
+        <th>Rewards</th>
         <th>Actions</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let t of travellers">
-        <td width="10%" data-label="Id"></td>
-        <td width="30%" data-label="Email"></td>
-        <td width="50%" data-label="Name"></td>
+      <tr *ngFor="let c of challenges">
+        <td width="5%" data-label="Id">{{ c.id }}</td>
+        <td width="15%" data-label="Title">{{ c.title }}</td>
+        <td width="10%" data-label="Type">Facebook Share</td>
+        <td width="20%" data-label="Instruction">{{ c.instruction }}</td>
+        <td width="20%" data-label="Instruction">{{ c.link }}</td>
+        <td width="10%" data-label="Hashtag">{{ c.hashtag }}</td>
+        <td width="10%" data-label="Reward">{{ c.rewards }}</td>
         <td width="10%" data-label="Actions">
           <div class="ui icon buttons">
               <button class="ui button"><i class="angle right icon"></i></button>
