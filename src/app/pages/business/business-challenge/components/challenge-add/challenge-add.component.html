@@ -1,5 +1,5 @@
 <div class="ui green padded segment">
-  <form #f="ngForm" (ngSubmit)="submitChallenge(f)" class="ui form" [ngClass]="{'loading' : formLoading}">
+  <form #f="ngForm" (ngSubmit)="submitChallenge(f)" class="ui form" [ngClass]="{'loading' : loading}">
     <h3 class="ui dividing header">Challenge Information</h3>
     <div class="field">
       <label>Title</label>
@@ -9,7 +9,6 @@
       <div class="field">
         <label >Type</label>
         <sui-select class="selection"
-                    (ngModel)="type"
                     #select>
             <sui-select-option value="Facebook Share">
             </sui-select-option>
