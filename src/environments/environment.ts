@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: "https://taragame.appspot.com/"
+  apiUrl: "http://localhost:8080/"
 };
 
 /*

@@ -2,21 +2,30 @@
   <form #f="ngForm" (ngSubmit)="submitChallenge(f)" class="ui form" [ngClass]="{'loading' : loading}">
     <h3 class="ui dividing header">Challenge Information</h3>
     <div class="field">
-      <label>Title</label>
-      <div class="field">
-        <input type="text" name="title" ngModel placeholder="Title">
-      </div>
-      <div class="field">
-        <label >Type</label>
-        <sui-select class="selection"
-                    #select>
+        <label >Challenge Type</label>
+        <sui-select class="selection" #select>
             <sui-select-option value="Facebook Share">
             </sui-select-option>
         </sui-select>
       </div>
+    <div class="field">
+      <label>Title</label>
+      <div class="field">
+        <input type="text" name="title" ngModel placeholder="Title" value="Share Facebook Page Challenge">
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Badge</label>
+      <div class="ui padded segment">
+        <img class="ui small image" (click)="inputBadge.click()" [src]="previewImage">
+      </div>
+      <input #inputBadge (change)="fileChangeEvent(e)" style="display: none" type="file" name="title" ngModel>
+    </div>
+      
       <div class="field">
         <label>Instruction</label>
-        <textarea rows="3" ngModel name="instruction" placeholder="Instruction"></textarea>
+        <textarea rows="3" ngModel name="instruction" placeholder="Instruction" ></textarea>
       </div>
       <div class="field">
         <label>Hashtag</label>
@@ -30,7 +39,6 @@
         <label>Rewards</label>
         <input type="text" ngModel  name="rewards"  placeholder="Rewards">
       </div>
-    </div>
 
     <button class="ui button primary" type="submit">Submit</button>
     <button class="ui button" (click)="cancel()" type="submit">Cancel</button>
